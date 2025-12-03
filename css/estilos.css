@@ -1,0 +1,187 @@
+/* estilos.css - El nuevo lenguaje de diseño para Hao Mei Lai */
+
+/* --- 1. Variables Globales y Base --- */
+:root {
+    --color-primary-red: #b30028;
+    --color-accent-gold: #ffd700;
+    --color-dark-bg: #121212;
+    --color-dark-surface: #1f1f1f;
+    --color-light-bg: #f9f9f9;
+    --color-light-surface: #ffffff;
+    --color-text-light: #e0e0e0;
+    --color-text-dark: #333333;
+    --font-headings: 'Montserrat', sans-serif;
+    --font-body: 'Lato', 'Roboto', sans-serif;
+    --shadow-light: 0 4px 18px rgba(0, 0, 0, 0.08);
+    --shadow-dark: 0 4px 18px rgba(0, 0, 0, 0.4);
+    --border-radius-main: 12px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background-color: var(--color-light-bg);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    font-weight: 700;
+    color: var(--color-primary-red);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+/* --- 2. Estilos de Botones Consistentes --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-family: var(--font-headings);
+    font-weight: 600;
+    font-size: 1em;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary-red);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #8c001f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(179, 0, 40, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--color-accent-gold);
+    color: var(--color-text-dark);
+}
+.btn-secondary:hover {
+    background-color: #e0be00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary-red);
+    border-color: var(--color-primary-red);
+}
+.btn-outline:hover {
+    background-color: var(--color-primary-red);
+    color: white;
+}
+
+/* --- 3. Estilo de Tarjeta de Producto Consistente --- */
+.product-card {
+    background: var(--color-light-surface);
+    border-radius: var(--border-radius-main);
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: var(--color-accent-gold);
+}
+.product-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.product-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.product-card-title {
+    font-family: var(--font-headings);
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--color-primary-red);
+    margin: 0 0 10px 0;
+}
+.product-card-description {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+.product-card-price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+.product-card .btn {
+    padding: 8px 18px;
+    font-size: 0.9em;
+}
+
+/* --- 4. Modo Oscuro --- */
+body.dark-mode {
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: var(--color-accent-gold);
+}
+body.dark-mode .btn-secondary {
+    color: var(--color-text-dark); /* El texto sobre oro siempre es oscuro */
+}
+body.dark-mode .btn-outline {
+    color: var(--color-accent-gold);
+    border-color: var(--color-accent-gold);
+}
+body.dark-mode .btn-outline:hover {
+    background-color: var(--color-accent-gold);
+    color: var(--color-text-dark);
+}
+body.dark-mode .product-card {
+    background: var(--color-dark-surface);
+    box-shadow: var(--shadow-dark);
+    border-color: transparent;
+}
+body.dark-mode .product-card:hover {
+    border-color: var(--color-accent-gold);
+}
+body.dark-mode .product-card-title {
+    color: var(--color-accent-gold);
+}
+body.dark-mode .product-card-description {
+    color: #aaa;
+}
+body.dark-mode .product-card-price {
+    color: var(--color-text-light);
+}

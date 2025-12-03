@@ -1,0 +1,282 @@
+/* Archivo restaurado: stylelogin.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ESTO ES LO NUEVO QUE AGREGAS */
+.login-page-bg {
+    background: url('/../imagenes/fondo comida.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-bg {
+    background: url('../imagenes/logo comida.png') sno-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.login-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.login-container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 40px 32px 24px 32px;
+    width: 350px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    border: 2px solid #e53935;
+    background: #fff;
+}
+h2 {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    color: #222;
+    font-size: 1.6em;
+}
+.login-subtitle {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 1em;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-size: 0.98em;
+    color: #444;
+    margin-bottom: 4px;
+    margin-top: 12px;
+}
+input[type="text"], input[type="password"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 1.5px solid #e53935;
+}
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    font-size: 0.97em;
+}
+.remember input[type="checkbox"] {
+    margin-right: 4px;
+}
+.forgot {
+    color: #e53935;
+    text-decoration: none;
+    font-size: 0.97em;
+}
+.forgot:hover {
+    text-decoration: underline;
+}
+.btn-login {
+    width: 100%;
+    background: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.08em;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-login:hover {
+    background: #b71c1c;
+}
+.divider {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    margin: 18px 0 12px 0;
+}
+.btn-register {
+    width: 100%;
+    background: #fff;
+    color: #e53935;
+    border: 2px solid #e53935;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 1.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-register:hover {
+    background: #e53935;
+    color: #fff;
+}
+.login-help {
+    margin-top: 14px;
+    font-size: 0.98em;
+    color: #444;
+}
+.login-help a {
+    color: #e53935;
+    text-decoration: none;
+    font-weight: 500;
+}
+.login-help a:hover {
+    text-decoration: underline;
+}
+.login-info {
+    margin-top: 18px;
+    font-size: 0.93em;
+    color: #666;
+    text-align: center;
+}
+footer {
+    position: absolute;
+    bottom: 12px;
+    left: 0; right: 0;
+    width: 100vw;
+    text-align: center;
+    color: #eee;
+    font-size: 0.95em;
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+.error-floating {
+    position: fixed;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d90427;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 280px;
+    max-width: 90vw;
+}
+.success-floating {
+    position: fixed;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #27ae60;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 1.1em;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 280px;
+    max-width: 90vw;
+}
+.forgot-link {
+    text-align: center;
+    margin-top: 12px;
+}
+.forgot-link a {
+    color: #274472;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    /* Ajustes al contenedor de login en móviles */
+    .login-container {
+        /* --- ESTILOS MODIFICADOS/AÑADIDOS --- */
+        width: 100%;                /* Ocupa el 100% del ancho */
+        min-height: 100vh;          /* Ocupa como mínimo el 100% del alto de la pantalla */
+        top: 0;                     /* Pega el contenedor arriba */
+        left: 0;                    /* Pega el contenedor a la izquierda */
+        transform: none;            /* Anula el 'translate(-50%, -50%)' del estilo de escritorio */
+        box-sizing: border-box;     /* Asegura que el padding se incluya dentro del 100% */
+        
+        /* Permite scroll si el contenido es muy largo (ej. al abrir el teclado) */
+        height: auto;           
+
+        /* --- Tus estilos que se mantienen --- */
+        padding: 30px 24px 20px 24px; 
+        box-shadow: none; 
+        border-radius: 0;
+    }
+    
+    .login-page-bg {
+        background: #fff; /* Cambia el fondo de comida por un fondo blanco simple */
+    }
+
+    .login-bg {
+        background: none; /* Quita cualquier otro fondo residual */
+    }
+
+    .login-bg::before {
+        content: none; /* Esto elimina el overlay oscuro en móviles */
+    }
+    /* ========================================================
+     FIN DE LAS REGLAS NUEVAS
+    ========================================================
+    */
+
+    /* Ajustes en los elementos flotantes de mensajes */
+    .error-floating, .success-floating {
+        width: 90%; /* Permite que los mensajes de error/éxito se adapten al ancho */
+        padding: 12px 24px; /* Reduce el padding */
+        top: 20px; /* Sube la posición para que no estorbe */
+    }
+
+    /* Ajustes en los títulos */
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .login-subtitle {
+        font-size: 0.9em;
+    }
+
+    /* Ajustes en los botones y campos de entrada */
+    input[type="text"], 
+    input[type="password"] {
+        padding: 10px; /* Ajusta el padding para que no se vean muy grandes */
+    }
+    
+    .btn-login,
+    .btn-register {
+        padding: 10px 0;
+        font-size: 1em;
+    }
+
+    /* Ajuste para el footer */
+    footer {
+        font-size: 0.85em;
+        bottom: 8px;
+    }
+}
