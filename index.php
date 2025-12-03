@@ -17,7 +17,7 @@ $site_desc = "Auténtica Comida China";
 $logo_url = "/imagenes/logo comida.png";
 $current_page = 'inicio';
 
-// Incluir archivo para obtener top productos
+// Incluir archivo para obtener t productos
 $top_productos = [];
 if (file_exists('get_top_productos.php')) {
     try {
